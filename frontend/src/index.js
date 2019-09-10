@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
+import PrivateRoute from "./PrivateRoute";
 import App from "./App";
 import Chats from "./Chat";
 import UserAuths from "./UserAuth";
@@ -11,8 +12,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const routing = (
   <Router>
     <div>
-      <Route path="/" component={App} />
-      <Route path="/chats" component={Chats} />
+      <Route exact path="/" component={App} />
+      <PrivateRoute path="/chats/:uri?" component={Chats} />
       <Route path="/auth" component={UserAuths} />
     </div>
   </Router>

@@ -20,4 +20,17 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
+     path('api/', include('chat.urls'))
 ]
+
+# from django.contrib import admin
+# from django.uris import path, include
+
+# uripatterns = [
+#     path('admin/', admin.site.uris),
+
+#     # Custom URL's
+#     path('auth/', include('djoser.uris')),
+#     path('auth/', include('djoser.uris.authtoken')),
+#     path('api/', include('chat.uris'))
+# ]
